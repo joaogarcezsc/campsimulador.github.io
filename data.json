@@ -480,7 +480,7 @@
         { "nome": "Wesley", "posicao": "lateral" },
         { "nome": "Mathias Oliveira", "posicao": "lateral" },
         { "nome": "Wissa", "posicao": "ponta" },
-        { "nome": "Oyarzabal", "posicao": "ponta" },
+        { "nome": "Oyarzabal", "posicao": "atacante" },
         { "nome": "Sancho", "posicao": "ponta" },
         { "nome": "Foden", "posicao": "ponta" }
       ]
@@ -544,7 +544,7 @@
       "nome": "Força Jovem Vasco",
       "logo": "",
       "estadio": "São Januário",
-      "treinador": { "nome": "Deschamps" },
+      "treinador": { "nome": "Eddie Howe" },
       "jogadores": [
         { "nome": "Salah", "posicao": "ponta" },
         { "nome": "Kinsky", "posicao": "zagueiro" },
@@ -557,7 +557,7 @@
         { "nome": "Tzolis", "posicao": "ponta" },
         { "nome": "Dan Ndoye", "posicao": "ponta" },
         { "nome": "Gudmundsson", "posicao": "ponta" },
-        { "nome": "João Neves", "posicao": "meia" },
+        { "nome": "João Neves", "posicao": "volante" },
         { "nome": "Martinelli", "posicao": "ponta" },
         { "nome": "Van Dijk", "posicao": "zagueiro" },
         { "nome": "De Bruyne", "posicao": "meia" },
