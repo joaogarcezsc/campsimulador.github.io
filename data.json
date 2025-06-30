@@ -132,7 +132,7 @@
         },
         {
           "nome": "Barella",
-          "posicao": "meia"
+          "posicao": "volante"
         },
         {
           "nome": "Matías Soulé",
@@ -148,11 +148,11 @@
         },
         {
           "nome": "Vini Jr",
-          "posicao": "atacante"
+          "posicao": "ponta"
         },
         {
           "nome": "Luis Díaz",
-          "posicao": "ponta"
+          "posicao": "atacante"
         },
         {
           "nome": "Savinho",
@@ -366,7 +366,7 @@
         { "nome": "Cucurella", "posicao": "lateral" },
         { "nome": "Çalhanoglu", "posicao": "volante" },
         { "nome": "Pulgar", "posicao": "volante" },
-        { "nome": "Vitinha", "posicao": "meia" },
+        { "nome": "Vitinha", "posicao": "volante" },
         { "nome": "Isco", "posicao": "meia" },
         { "nome": "Messi", "posicao": "meia" },
         { "nome": "Antonio Nusa", "posicao": "ponta" },
@@ -530,7 +530,8 @@
         { "nome": "Douglas Luiz", "posicao": "volante" },
         { "nome": "Enciso", "posicao": "meia" },
         { "nome": "Tchouaméni", "posicao": "volante" },
-        { "nome": "Szoboszlai", "posicao": "meia" },
+        { "nome": "Szoboszlai", "posicao": "volante" },
+        { "nome": "Jude Bellingham", "posicao": "volante" },
         { "nome": "Sané", "posicao": "ponta" },
         { "nome": "Summerville", "posicao": "ponta" },
         { "nome": "Samuel Lino", "posicao": "ponta" },
