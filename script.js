@@ -314,8 +314,8 @@ function confirmarEscalacoes() {
     const jogadorB = escalações.B[i] || "(vazio)";
     const linha = document.createElement("div");
     linha.innerHTML = `${jogadorA} × ${jogadorB} 
-      <button onclick="definirVencedor(${i}, 'A')">A</button> 
-      <button onclick="definirVencedor(${i}, 'B')">B</button>`;
+ <button onclick="definirVencedor(${i}, 'A', this)">A</button>
+<button onclick="definirVencedor(${i}, 'B', this)">B</button>`;
     confrontos[i] = {
       tipo: "jogador",
       index: i,
@@ -329,8 +329,8 @@ function confirmarEscalacoes() {
   // confronto dos treinadores
   const tecnicoLinha = document.createElement("div");
   tecnicoLinha.innerHTML = `${timeSelecionadoA.treinador.nome} × ${timeSelecionadoB.treinador.nome} (Treinadores)
-    <button onclick="definirVencedor('tecnico', 'A')">A</button>
-    <button onclick="definirVencedor('tecnico', 'B')">B</button>`;
+<button onclick="definirVencedor('tecnico', 'A', this)">A</button>
+<button onclick="definirVencedor('tecnico', 'B', this)">B</button>`;
   confrontos.push({
     tipo: "treinador",
     treinadorA: timeSelecionadoA.treinador.nome,
