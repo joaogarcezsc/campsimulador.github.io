@@ -2,7 +2,7 @@
   "times": [
     {
       "nome": "Aves de Rapina",
-      "logo": "",
+      "logo": "img/aves.jpg",
       "estadio": "O Ninho",
       "treinador": {
         "nome": "Nuno Espírito Santo"
