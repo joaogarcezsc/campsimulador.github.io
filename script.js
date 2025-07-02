@@ -193,12 +193,12 @@ function montarInterfaceEscalacao() {
   container.appendChild(blocoB);
 
   const botaoAutoA = document.createElement("button");
-  botaoAutoA.textContent = "Preencher automaticamente CASA";
+  botaoAutoA.textContent = "Preencher automaticamente A";
   botaoAutoA.onclick = () => preencherAuto("A");
   container.appendChild(botaoAutoA);
 
   const botaoAutoB = document.createElement("button");
-  botaoAutoB.textContent = "Preencher automaticamente FORA";
+  botaoAutoB.textContent = "Preencher automaticamente B";
   botaoAutoB.onclick = () => preencherAuto("B");
   container.appendChild(botaoAutoB);
 }
@@ -314,8 +314,8 @@ function confirmarEscalacoes() {
     const jogadorB = escalações.B[i] || "(vazio)";
     const linha = document.createElement("div");
     linha.innerHTML = `${jogadorA} × ${jogadorB} 
-      <button onclick="definirVencedor(${i}, 'A')">C</button> 
-      <button onclick="definirVencedor(${i}, 'B')">F</button>`;
+      <button onclick="definirVencedor(${i}, 'A')">A</button> 
+      <button onclick="definirVencedor(${i}, 'B')">B</button>`;
     confrontos[i] = {
       tipo: "jogador",
       index: i,
@@ -329,8 +329,8 @@ function confirmarEscalacoes() {
   // confronto dos treinadores
   const tecnicoLinha = document.createElement("div");
   tecnicoLinha.innerHTML = `${timeSelecionadoA.treinador.nome} × ${timeSelecionadoB.treinador.nome} (Treinadores)
-    <button onclick="definirVencedor('tecnico', 'A')">C</button>
-    <button onclick="definirVencedor('tecnico', 'B')">F</button>`;
+    <button onclick="definirVencedor('tecnico', 'A')">A</button>
+    <button onclick="definirVencedor('tecnico', 'B')">B</button>`;
   confrontos.push({
     tipo: "treinador",
     treinadorA: timeSelecionadoA.treinador.nome,
@@ -416,14 +416,14 @@ function calcularPontuacao() {
 
   if (vitoriasA > vitoriasB) {
     resultado.pontosA += 1;
-    resultado.detalhes.push("Mano a mano: vitória do Time CASA");
+    resultado.detalhes.push("Mano a mano: vitória do Time A");
     if (vitoriasA >= 8) {
       resultado.pontosA += 0.5;
       resultado.detalhes.push("Mano a mano: +0.5 extra por ampla vitória");
     }
   } else if (vitoriasB > vitoriasA) {
     resultado.pontosB += 1;
-    resultado.detalhes.push("Mano a mano: vitória do Time FORA");
+    resultado.detalhes.push("Mano a mano: vitória do Time B");
     if (vitoriasB >= 8) {
       resultado.pontosB += 0.5;
       resultado.detalhes.push("Mano a mano: +0.5 extra por ampla vitória");
@@ -437,10 +437,10 @@ function calcularPontuacao() {
   const treinador = confrontos.find((c) => c.tipo === "treinador");
   if (treinador?.vencedor === "A") {
     resultado.pontosA += 1;
-    resultado.detalhes.push("Treinador: vitória do Time CASA");
+    resultado.detalhes.push("Treinador: vitória do Time A");
   } else if (treinador?.vencedor === "B") {
     resultado.pontosB += 1;
-    resultado.detalhes.push("Treinador: vitória do Time FORA");
+    resultado.detalhes.push("Treinador: vitória do Time B");
   } else {
     resultado.pontosA += 0.5;
     resultado.pontosB += 0.5;
@@ -450,10 +450,10 @@ function calcularPontuacao() {
   const sorteio = Math.ceil(Math.random() * 3);
   if (sorteio === 1) {
     resultado.pontosA += 1;
-    resultado.detalhes.push("Aleatório: ponto para Time CASA");
+    resultado.detalhes.push("Aleatório: ponto para Time A");
   } else if (sorteio === 2) {
     resultado.pontosB += 1;
-    resultado.detalhes.push("Aleatório: ponto para Time FORA");
+    resultado.detalhes.push("Aleatório: ponto para Time B");
   } else {
     resultado.pontosA += 0.5;
     resultado.pontosB += 0.5;
