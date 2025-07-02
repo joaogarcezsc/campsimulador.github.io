@@ -535,7 +535,7 @@ function mostrarResultado(resultado) {
   ].forEach(({ t, gols }) => {
     for (let i = 0; i < gols; i++) {
       const jogadores = escalações[t];
-      const time = t === "A" ? timeSelecionadoA : timeSelecionadoB;
+      const time = t === "C" ? timeSelecionadoA : timeSelecionadoB;
 
       // Filtra os jogadores, removendo goleiros
       const lista = jogadores
