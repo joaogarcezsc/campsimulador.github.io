@@ -167,6 +167,7 @@
         { "nome": "Balde", "posicao": "lateral" },
         { "nome": "Johnny Cardoso", "posicao": "volante" },
         { "nome": "Matheus Nunes", "posicao": "volante" },
+        { "nome": "Tilemans", "posicao": "volante" },
         { "nome": "Julian Brandt", "posicao": "meia" },
         { "nome": "Dani Olmo", "posicao": "meia" },
         { "nome": "Tyler Dibling", "posicao": "meia" },
@@ -218,7 +219,7 @@
         },
         {
           "nome": "Edson Alvarez",
-          "posicao": "meia"
+          "posicao": "volante"
         },
         {
           "nome": "De Jong",
@@ -275,10 +276,10 @@
         { "nome": "Sergio Ramos", "posicao": "zagueiro" },
         { "nome": "Musiala", "posicao": "meia" },
         { "nome": "Fabián Ruiz", "posicao": "volante" },
-        { "nome": "Mac Allister", "posicao": "meia" },
+        { "nome": "Mac Allister", "posicao": "volante" },
         { "nome": "Almada", "posicao": "meia" },
         { "nome": "Rabiot", "posicao": "volante" },
-        { "nome": "Lobotka", "posicao": "meia" },
+        { "nome": "Lobotka", "posicao": "volante" },
         { "nome": "Greenwood", "posicao": "ponta" },
         { "nome": "Eze", "posicao": "ponta" },
         { "nome": "Bailey", "posicao": "ponta" },
@@ -609,7 +610,7 @@
           "posicao": "zagueiro"
         },
         {
-          "nome": "Boey",
+          "nome": "Aurier",
           "posicao": "lateral"
         },
         {
