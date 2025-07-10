@@ -128,7 +128,7 @@
     },
     {
       "nome": "Babilônia City",
-      "logo": "",
+      "logo": "img/babilonia.jpg",
       "estadio": "Babizão Stadium",
       "treinador": {
         "nome": "Antonio Conte"
@@ -152,7 +152,7 @@
 
     {
       "nome": "Beast Dragon",
-      "logo": "",
+      "logo": "img/beast.jpg",
       "estadio": "Arena do Dragão Invencível",
       "treinador": {
         "nome": "Xabi Alonso"
@@ -261,7 +261,7 @@
     },
     {
       "nome": "Folgozos",
-      "logo": "",
+      "logo": "img/folgozos.jpg",
       "estadio": "Estádio Olímpico de Maranello",
       "treinador": { "nome": "Hansi Flick" },
       "jogadores": [
@@ -290,7 +290,7 @@
     },
     {
       "nome": "Força Jovem Vasco",
-      "logo": "",
+      "logo": "img/fjv.jpg",
       "estadio": "São Januário",
       "treinador": { "nome": "Eddie Howe" },
       "jogadores": [
@@ -320,7 +320,7 @@
     },
     {
       "nome": "Fúrias da Noite",
-      "logo": "",
+      "logo": "img/furias.jpg",
       "estadio": "Vila Berk",
       "treinador": {
         "nome": "De La Fuente"
@@ -405,7 +405,7 @@
     },
     {
       "nome": "Legends",
-      "logo": "",
+      "logo": "img/crl.jpg",
       "estadio": "Parc des Légendes",
       "treinador": {
         "nome": "Arne Slot"
@@ -436,7 +436,7 @@
     },
     {
       "nome": "Lions",
-      "logo": "",
+      "logo": "img/lions.jpg",
       "estadio": "Lions Stadium",
       "treinador": { "nome": "Ancelotti" },
       "jogadores": [
@@ -465,7 +465,7 @@
 
     {
       "nome": "Mulambos",
-      "logo": "",
+      "logo": "img/mulambos.jpg",
       "estadio": "Mulambos Park",
       "treinador": { "nome": "Scaloni" },
       "jogadores": [
@@ -496,7 +496,7 @@
     },
     {
       "nome": "Oklahoma City Thunder",
-      "logo": "",
+      "logo": "img/thunder.jpg",
       "estadio": "Paycom Center",
       "treinador": { "nome": "Enzo Maresca" },
       "jogadores": [
@@ -560,7 +560,7 @@
 
     {
       "nome": "Panteras Negras",
-      "logo": "",
+      "logo": "img/panteras.jpg",
       "estadio": "Wakanda",
       "treinador": { "nome": "Simeone" },
       "jogadores": [
@@ -587,7 +587,7 @@
 
     {
       "nome": "Quarteto Fantástico",
-      "logo": "",
+      "logo": "img/4fan.jpg",
       "estadio": "Parc des Légendes",
       "treinador": {
         "nome": "Arteta"
@@ -673,7 +673,7 @@
 
     {
       "nome": "Spacex",
-      "logo": "",
+      "logo": "img/spacex.jpg",
       "estadio": "La Boboneira",
       "treinador": {
         "nome": "Roberto Martínez"
