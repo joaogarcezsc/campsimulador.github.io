@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CAMP Simulator - Clássico</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/style.css" />
 </head>
 
 <body>
@@ -16,7 +16,6 @@
     </nav>
 
     <main id="conteudo">
-
         <div class="section">
             <h2>O que é o CAMP?</h2>
             <p>
@@ -27,12 +26,12 @@
         <div class="section">
             <h2>Simulação Clássica</h2>
             <p>Modo manual, simples e direto. Ideal para testes e partidas rápidas.</p>
-            <button onclick="abrirSelecaoTimes()">Iniciar</button>
+            <a href="simulacao-classica.html"><button>Entrar</button></a>
         </div>
 
         <div class="section bloqueado">
             <h2>Simulação Avançada</h2>
-            <p>Modo com roleta de eventos, substituições e outros acontecimento que deixam o jogo mais realista. Em breve.</p>
+            <p>Modo com roleta de eventos, substituições e outros acontecimentos que deixam o jogo mais realista. Em breve.</p>
             <button disabled>Bloqueado</button>
         </div>
 
@@ -41,61 +40,11 @@
             <p>Mano a Mano automático baseado em estatísticas reais. Em breve.</p>
             <button disabled>Bloqueado</button>
         </div>
-
-        <section id="escolhaOrigem" class="section" style="display: none;">
-
-            <h2>Escolha o tipo de times para simulação</h2>
-            <label>
-                <input type="radio" name="origem" value="camp" checked> Times do CAMP
-            </label><br>
-            <label>
-                <input type="radio" name="origem" value="reais"> Times da vida real
-            </label><br><br>
-            <button onclick="irParaSelecaoTimes()">Avançar</button>
-        </section>
-
-
-        <div class="section layout-responsivo" id="selecaoTimes" style="display:none;">
-            <h2>Escolha os Times</h2>
-            <label for="timeA">Time Mandante:</label>
-            <select id="timeA"></select>
-            <label for="timeB">Time Visitante:</label>
-            <select id="timeB"></select>
-            <br />
-            <div style="margin-top: 10px;">
-                <img id="logoTimeA" src="" alt="Logo Time A" width="50" style="display: none; margin-right: 20px;">
-                <img id="logoTimeB" src="" alt="Logo Time B" width="50" style="display: none;">
-            </div>
-            <br />
-            <label><input type="checkbox" id="campoNeutro"> Jogo em campo neutro (ambos ganham ponto de casa)</label>
-            <br />
-            <button id="btnAvancar" disabled onclick="irParaEscalacao()">Avançar</button>
-        </div>
-
-        <div class="section" id="escalacaoContainer" style="display:none;">
-            <h2>Montar Escalações</h2>
-            <div id="formacoes">
-                <label>Formação Time CASA:</label>
-                <select id="formacaoA"></select>
-                <label>Formação Time FORA:</label>
-                <select id="formacaoB"></select>
-            </div>
-            <div id="elencoTimes" style="margin-top: 20px;"></div>
-            <button id="botaoConfirmarEscalacao" onclick="confirmarEscalacoes()" disabled>Avançar</button>
-        </div>
-
-        <div id="modal">
-            <div id="listaJogadores"></div>
-            <button id="fecharModal">Fechar</button>
-        </div>
-
     </main>
 
     <footer>
         <p>© 2025 CAMP Simulator. Versão 1.0.8</p>
     </footer>
-
-    <script src="script.js"></script>
 
 </body>
 
