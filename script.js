@@ -133,7 +133,7 @@ function irParaSelecaoTimes() {
 
   // Carrega o JSON correspondente
   if (origem === "reais") {
-    carregarJSON("reais.json");
+    carregarJSON("timesreais.json");
   } else {
     carregarJSON("data.json");
   }
