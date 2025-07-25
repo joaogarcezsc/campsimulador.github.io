@@ -96,44 +96,60 @@ function irParaSelecaoTimes() {
   abrirSelecaoTimes();
 }
 
-async function carregarJSON() {
-  try {
-    const res = await fetch(caminhoArquivo);
-    const data = await res.json();
-    times = data.times;
+async function carregarJSON(caminho = "data.json") {
+  const res = await fetch(caminho);
+  const data = await res.json();
+  times = data.times;
 
-    const timeASelect = document.getElementById("timeA");
-    const timeBSelect = document.getElementById("timeB");
+  const timeASelect = document.getElementById("timeA");
+  const timeBSelect = document.getElementById("timeB");
 
-    // limpa opções anteriores
-    timeASelect.innerHTML = "<option value=''>Selecione</option>";
-    timeBSelect.innerHTML = "<option value=''>Selecione</option>";
+  // Limpa opções anteriores
+  timeASelect.innerHTML = "";
+  timeBSelect.innerHTML = "";
 
-    times.forEach((time) => {
-      const optA = document.createElement("option");
-      optA.value = time.nome;
-      optA.textContent = time.nome;
-      timeASelect.appendChild(optA);
+  times.forEach((time) => {
+    const optA = document.createElement("option");
+    optA.value = time.nome;
+    optA.textContent = time.nome;
+    timeASelect.appendChild(optA);
 
-      const optB = document.createElement("option");
-      optB.value = time.nome;
-      optB.textContent = time.nome;
-      timeBSelect.appendChild(optB);
-    });
+    const optB = document.createElement("option");
+    optB.value = time.nome;
+    optB.textContent = time.nome;
+    timeBSelect.appendChild(optB);
+  });
 
-    timeASelect.addEventListener("change", validarSelecao);
-    timeBSelect.addEventListener("change", validarSelecao);
-  } catch (error) {
-    console.error("Erro ao carregar arquivo JSON:", error);
+  timeASelect.addEventListener("change", validarSelecao);
+  timeBSelect.addEventListener("change", validarSelecao);
+}
+
+function irParaSelecaoTimes() {
+  // Oculta a seção de escolha de origem
+  document.getElementById("escolhaOrigem").style.display = "none";
+
+  // Verifica qual foi a opção escolhida (CAMP ou Reais)
+  const origem = document.querySelector('input[name="origem"]:checked')?.value;
+
+  // Carrega o JSON correspondente
+  if (origem === "reais") {
+    carregarJSON("reais.json");
+  } else {
+    carregarJSON("data.json");
   }
+
+  // Exibe a próxima etapa
+  document.getElementById("selecaoTimes").style.display = "block";
 }
 
 function abrirSelecaoTimes() {
+  // Oculta todas as seções
   document
     .querySelectorAll(".section")
     .forEach((sec) => (sec.style.display = "none"));
-  document.getElementById("selecaoTimes").style.display = "block";
-  carregarJSON();
+
+  // Exibe a seção para escolher a origem dos times
+  document.getElementById("escolhaOrigem").style.display = "block";
 }
 
 function validarSelecao() {
