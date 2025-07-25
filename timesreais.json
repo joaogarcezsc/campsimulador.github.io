@@ -2,7 +2,7 @@
   "times": [
     {
       "nome": "Real Madrid",
-      "logo": "img/Real_Madrid_CF.svg.png",
+      "logo": "img/realmadrid.png",
       "estadio": "Santiago Bernabéu",
       "treinador": {
         "nome": "Xabi Alonso"
@@ -23,7 +23,7 @@
     },
     {
       "nome": "Barcelona",
-      "logo": "img/Barcelona.png",
+      "logo": "img/barcelona.png",
       "estadio": "Olímpic Lluís Companys",
       "treinador": {
         "nome": "Hansi Flick"
@@ -45,7 +45,7 @@
     },
     {
       "nome": "Bayern de Munique",
-      "logo": "img/FC_B",
+      "logo": "img/bayern.jpg",
       "estadio": "Allianz Arena",
       "treinador": {
         "nome": "Vincent Kompany"
@@ -78,7 +78,7 @@
     },
     {
       "nome": "Paris Saint-Germain",
-      "logo": "img/LOGO_PSG.png",
+      "logo": "img/psg.png",
       "estadio": "Parc des Princes",
       "treinador": {
         "nome": "Luis Enrique"
@@ -108,7 +108,7 @@
     },
     {
       "nome": "Liverpool",
-      "logo": "img/Liverpool_FC.svg.png",
+      "logo": "img/liverpool.jpg",
       "estadio": "Anfield",
       "treinador": {
         "nome": "Arne Slot"
@@ -141,7 +141,7 @@
     },
     {
       "nome": "Manchester City",
-      "logo": "img/Manchester_City_Football_Club.png",
+      "logo": "img/city.png",
       "estadio": "Etihad Stadium",
       "treinador": {
         "nome": "Pep Guardiola"
