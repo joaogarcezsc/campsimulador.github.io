@@ -83,28 +83,49 @@ const formacoesDisponiveis = {
   ],
 };
 
+let caminhoArquivo = "data.json"; // padrão: CAMP
+
+function definirOrigemTimes(origem) {
+  caminhoArquivo = origem === "reais" ? "timesreais.json" : "data.json";
+}
+
+function irParaSelecaoTimes() {
+  const origem = document.querySelector('input[name="origem"]:checked').value;
+  definirOrigemTimes(origem);
+  document.getElementById("escolhaOrigem").style.display = "none";
+  abrirSelecaoTimes();
+}
+
 async function carregarJSON() {
-  const res = await fetch("data.json");
-  const data = await res.json();
-  times = data.times;
+  try {
+    const res = await fetch(caminhoArquivo);
+    const data = await res.json();
+    times = data.times;
 
-  const timeASelect = document.getElementById("timeA");
-  const timeBSelect = document.getElementById("timeB");
+    const timeASelect = document.getElementById("timeA");
+    const timeBSelect = document.getElementById("timeB");
 
-  times.forEach((time) => {
-    const optA = document.createElement("option");
-    optA.value = time.nome;
-    optA.textContent = time.nome;
-    timeASelect.appendChild(optA);
+    // limpa opções anteriores
+    timeASelect.innerHTML = "<option value=''>Selecione</option>";
+    timeBSelect.innerHTML = "<option value=''>Selecione</option>";
 
-    const optB = document.createElement("option");
-    optB.value = time.nome;
-    optB.textContent = time.nome;
-    timeBSelect.appendChild(optB);
-  });
+    times.forEach((time) => {
+      const optA = document.createElement("option");
+      optA.value = time.nome;
+      optA.textContent = time.nome;
+      timeASelect.appendChild(optA);
 
-  timeASelect.addEventListener("change", validarSelecao);
-  timeBSelect.addEventListener("change", validarSelecao);
+      const optB = document.createElement("option");
+      optB.value = time.nome;
+      optB.textContent = time.nome;
+      timeBSelect.appendChild(optB);
+    });
+
+    timeASelect.addEventListener("change", validarSelecao);
+    timeBSelect.addEventListener("change", validarSelecao);
+  } catch (error) {
+    console.error("Erro ao carregar arquivo JSON:", error);
+  }
 }
 
 function abrirSelecaoTimes() {
@@ -368,9 +389,18 @@ function definirVencedor(index, vencedor, btn) {
 }
 
 window.onload = () => {
+  // Fecha o modal ao clicar em "fechar"
   document.getElementById("fecharModal").onclick = () => {
     document.getElementById("modal").style.display = "none";
   };
+
+  // Oculta todas as seções no início
+  document
+    .querySelectorAll(".section")
+    .forEach((s) => (s.style.display = "none"));
+
+  // Exibe apenas a escolha de origem
+  document.getElementById("escolhaOrigem").style.display = "block";
 };
 
 function simularPartida() {
